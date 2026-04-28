@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Legg til medlem</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Legg til medlem</h1>
+
+<form method="POST">
+
+    <label>Navn</label>
+    <input type="text" name="navn" required>
+
+    <label>Alder</label>
+    <input type="number" name="alder" required>
+
+    <label>Passord</label>
+    <input type="password" name="passord" required>
+
+    <button type="submit">Lagre</button>
+
+</form>
+
+</body>
+</html>

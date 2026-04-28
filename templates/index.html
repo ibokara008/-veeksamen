@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Medlemmer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Medlemsliste</h1>
+
+<a href="/leggtil">Legg til medlem</a>
+
+<table>
+
+    <tr>
+        <th>Navn</th>
+        <th>Alder</th>
+        <th>Handling</th>
+    </tr>
+
+    {% for medlem in medlemmer %}
+    <tr>
+        <td>{{ medlem.navn }}</td>
+        <td>{{ medlem.alder }}</td>
+        <td>
+            <a href="/slett/{{ medlem.id }}">Slett</a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
